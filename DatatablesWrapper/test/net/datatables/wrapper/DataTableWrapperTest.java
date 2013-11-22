@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
 
 import javax.servlet.ServletOutputStream;
@@ -133,6 +134,7 @@ public class DataTableWrapperTest {
 		
 		//set datas for the table
 		tbl.aaData = getAaData();
+		tbl.aaSorting = new String[][]{{"1", "a"}, {"2", "b"}};
 		
 		//to use utility method toString(), assign setDataTable method by this table.
 		//wrapper.setDataTable(tbl);
@@ -141,6 +143,8 @@ public class DataTableWrapperTest {
 		
 		//Write datatable object into Out
 		wrapper.writeJson(response.getOutputStream(), tbl);
+		
+		
 		
 	}
 
@@ -162,6 +166,8 @@ public class DataTableWrapperTest {
 		
 		return columns;
 	}
+	
+	
 	
 
 }
