@@ -1199,6 +1199,8 @@ public class DataTable<T> extends AnnotationParsing<T> {
 	 */
 	public List<T> aaData;
 	
+	public String[][] aaSorting; 
+	
 	public List<AoColumn> getAoColumns() {
 		return aoColumns == null? super.parseAoColumns(): aoColumns;
 	}
