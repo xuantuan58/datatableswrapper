@@ -42,7 +42,7 @@ public class AnnotationParsing<T>{
 						net.datatables.wrapper.model.AoColumn aoColumn = new net.datatables.wrapper.model.AoColumn();
 
 						aoColumn.aDataSort = toIntegerArr(anoColumn.aDataSort());
-						aoColumn.asSorting = toIntegerArr(anoColumn.asSorting());
+						aoColumn.asSorting = toStringArr(anoColumn.asSorting());
 						aoColumn.bSearchable = toBoolean(anoColumn.bSearchable());
 						aoColumn.bSortable = toBoolean(anoColumn.bSortable());
 						aoColumn.bVisible = toBoolean(anoColumn.bVisible());
@@ -172,11 +172,21 @@ public class AnnotationParsing<T>{
 		}
 	}
 
-	private String getMData(String anotated, String fieldName) {
-		if (anotated != null && anotated.equals("")) {
+	private String getMData(String annotated, String fieldName) {
+		if (annotated != null && annotated.equals("")) {
 			return fieldName;
 		} else {
-			return anotated;
+			return annotated;
 		}
 	}
+	
+	private String[] toStringArr(String[] annotatedArr){
+		if(annotatedArr != null && annotatedArr.length > 0){
+			return annotatedArr;
+		}
+		else{
+			return null;
+		}
+	}
+	
 }

@@ -127,7 +127,7 @@ public class AoColumn {
 	 * } );
 	 * </pre>
 	 */
-	public Integer[] asSorting;
+	public String[] asSorting;
 	/**
 	 * Enable or disable filtering on the data in this column.
 	 * 

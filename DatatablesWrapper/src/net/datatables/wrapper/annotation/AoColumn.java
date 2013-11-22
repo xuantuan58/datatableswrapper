@@ -14,7 +14,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface AoColumn {
 	int[] aDataSort() default {};
-	int[] asSorting() default {};
+	String[] asSorting() default {};
 	boolean bSearchable() default true;
 	boolean bSortable() default true;
 	boolean bVisible() default true;
